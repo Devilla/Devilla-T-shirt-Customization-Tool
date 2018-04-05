@@ -1,0 +1,907 @@
+header, section, footer, aside, nav, main, article, figure {
+    display: block;  
+}
+body {
+padding: 0;
+margin: 0;
+}
+
+@font-face { 
+   font-family: painting ;
+   src: url(font/painting.ttf);
+}
+@font-face { 
+   font-family: appleberry ;
+   src: url(font/appleberry.ttf);
+}
+#color{
+    position: fixed;
+    left: 200px;
+
+  }
+
+  /*  Right sidebar menu TEXT STYLING STARTS HERE */
+.TFont {
+ 
+
+   background-color: #4CAF50;
+    padding: 10px;
+    font-size: 16px;
+ 
+    color: white;
+    position: relative;
+    float: left;
+    top:15px;
+    display: inline-block;
+    width:120px;
+    border-radius: 7px;
+
+
+}
+
+
+.StyleDropdown
+{
+  margin-left: 6px;
+
+padding: 10px;
+    font-size: 16px;
+  background-color: #ff6666;
+    color: white;
+    position: relative;
+    left:50px;
+     right: 0px;
+    top:0px;
+    display: inline-block;
+    width:120px;
+    border-radius: 7px;
+}
+
+
+
+.TFont-content {
+  
+ 
+   
+     display: none;
+    position: relative;
+    right: 30px;
+     background-color: #f9f259;
+
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.StyleDropdown-content{
+      display: none;
+    position: absolute;
+    left: 30px;
+    background-color: #ff9966;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 7px;
+
+
+   }
+
+
+
+.TFont-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+  .StyleDropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.TFont-content a:hover {background-color: #f1f1f1}
+
+.StyleDropdown-content a:hover {background-color: #f1f1f1}
+
+.TFont:hover .TFont-content {
+    display: block;
+}
+.StyleDropdown:hover .StyleDropdown-content {
+    display: block;
+}
+
+.TFont:hover .TFont {
+    background-color: #3e8e41;
+}
+
+.StyleDropdown:hover .StyleDropdown {
+    background-color: #3e8e41;
+}
+
+@font-face { 
+   font-family: angels ;
+   src: url(font/angels.ttf);
+}
+
+#tooltipRight
+{
+  position: absolute;
+
+/*  display: none;*/
+top:200px;
+  right:80px;
+z-index: 99;
+}
+
+#right-arrow {
+  display: inline-block;
+  position: relative;
+  background-image: url('content/ClipArt/back1.jpg');
+  padding: 0px;
+  float:left;
+  height: 400px;
+  width:450px;
+  border-radius: 10px;
+box-shadow: #249e87;
+
+ 
+    right: 30px;
+    z-index: 999;
+
+}
+
+#tooltipRight:after {
+  content: '';
+/*  display: none;  */
+  position: absolute;
+  right: 100%;
+  top: 100px;
+  left: 418px;
+  margin-top: -10px;
+  width: 0;
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-left: 20px solid #249e87;
+  border-bottom: 20px solid transparent;
+  z-index:999;
+
+}
+
+#scrollside2::-webkit-scrollbar {
+    width: 10px;
+    height:0px;
+}
+
+#scrollside2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   background: white;
+   border-left: 3px solid #249e87;/*change bgcolour change this track also*/ 
+    border-right: 3px solid #249e87;/*change bgcolour change this track also*/ 
+    border-radius: 5px;
+}
+
+#scrollside2::-webkit-scrollbar-thumb {
+
+     background: orange;
+    border-left: 5px ;
+    border-radius: 5px;
+}
+
+#scrollside2::-webkit-scrollbar-corner       { 
+display: none;
+ }
+
+#choosecolor
+{ text-align: center;
+  
+  position: absolute;
+    right: 140px;
+  
+    top:300px;
+    font:"#ffffff";
+    font-weight:30px;
+    background-color: lightgreen;
+    box-shadow: 0px 8px 16px 0px rgba(133 ,233 ,133 ,0.89);
+   height: 50px;
+width:220px;
+-moz-border-radius-bottom-right: 50px 25px;
+border-bottom-right-radius: 150px 65px;
+border-bottom-left-radius: 150px 65px;
+}
+
+#colorpick{
+    position: relative;
+    right: 150px;
+    width:30px;
+    height:50px;
+    top:80px;
+
+   border:10px solid lightblue;
+    
+    cursor: hand;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  input[type="color"] {
+    position: relative;
+    left: 100px;
+
+  -webkit-appearance: none;
+  border: none;
+  width: 2px;
+  height: 2px;
+  border:4px pink;
+  border-radius: 100%;
+
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+
+}
+input[type="color"]::-webkit-color-swatch {
+  border: 2px  pink;
+
+}
+
+.textcanvas_warpper
+{
+    width:400px;
+    height:400px;
+    position: fixed;
+    left:250px;
+    top:180px;
+
+}
+
+#chooseTShirtPanel{
+	
+	position:fixed;
+	top:70px;
+	width:250px;
+    border:1px solid lightblue;
+    left:3px;
+    height:250px;
+
+
+}
+
+.dec{
+    padding:15px;
+    text-align: center;
+
+}
+
+
+#TShirtPanel{
+	
+	position:fixed;
+	top:10px;
+	left:300px;
+	width:580px;
+	height:600px;
+    
+	
+	
+	
+}
+
+
+
+
+
+
+#div1{
+text-align:center;
+text-align: center;
+border:3px solid black;
+position:relative;
+height:350px;
+	
+	
+	
+}
+
+#image{
+ width: 120px;
+    height: 120px;
+	
+	position:fixed;
+	top:180px;
+	float:left;
+	    
+}
+#image1{
+ width: 500px;
+    height: 500px;
+	
+	
+	float:right;
+	position:relative;
+
+	    
+}
+
+#image2{
+ width: 120px;
+    height: 120px;
+	
+	position:relative;
+	top:20px;
+	float:left;
+	    
+}
+
+#image4{
+	 width: 120px;
+    height: 120px;
+	
+	position:relative;
+	top:20px;
+	float:right;
+	
+	
+	
+}
+
+#image3{
+	 width: 120px;
+    height:160px;
+
+	position:relative;
+	top:20px;
+	float:left;
+	
+	
+	
+}
+
+#image5{
+	position:absolute;
+	
+	height:600px;
+	width:580px;
+	
+	float:right;
+	left:0px;
+   
+    background-size: 600px;
+   
+
+    background-repeat: no-repeat;
+    z-index: -1;
+	
+	
+}
+#btnSave{
+			position:fixed;
+			top:610px;
+			right:800px;
+			width:175px;
+			height:30px;
+			background:transparent;
+			border:0px;
+			font-family: Appleberry;
+			font-size: 20;
+			 color:#00cc99;
+
+			
+
+
+}
+
+#btnPlay{
+
+				position:fixed;
+			top:610px;
+			right:430px;
+			width:100px;
+			height:30px;
+			background: transparent;
+			border:0px;
+			font-family: appleberry;
+			font-size: 20;
+			 color:#00cc99;
+
+
+}
+
+
+#SaveButton{
+
+			position:fixed;
+			top:610px;
+			right:800px;
+			width:265px;
+			height:30px;
+		background:transparent;
+			border:1px solid lightgreen;
+			border-radius: 7px;
+			box-shadow: 0px 8px 16px 0px rgba(133 ,233 ,109 ,0.89);
+
+}
+#PlayButton{
+
+						position:fixed;
+			top:610px;
+			right:430px;
+			width:100px;
+			height:30px;
+			background: #ccff33;
+			border:1px solid lightgreen;
+			border-radius: 7px;
+			box-shadow: 0px 8px 16px 0px rgba(133 ,233 ,109 ,0.89);
+
+
+}
+
+
+
+
+	
+#image7{
+ width: 120px;
+    height: 120px;
+	
+	position:relative;
+	top:20px;
+	float:right;
+	    
+}
+
+
+
+#ClipImg
+{
+
+
+	width: 120px;
+    height: 120px;
+	border:1px solid lightblue;
+	position:relative;
+	top:20px;
+	float:left;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+
+.canvas-container{
+
+position:fixed;
+left:160px;
+top:70px;
+
+
+}
+.upper-canvas{
+	position:fixed;
+
+
+
+}
+#formBox{
+
+	position:absolute;
+	width:24px;
+	height:24px;
+	border:1px solid lightgreen;
+	left:150px;
+	top:10px;
+}
+
+
+
+        /*Crousel Styling */
+
+
+      .carousel.initialized{
+                            
+                    height:500px;
+                    width:800px;
+                
+                    
+
+
+    }
+   
+    .close{
+    						
+                        position: relative;
+                        top:1px;
+                        float:right;
+    }
+
+
+    .closecrousel{
+
+    				width: 30px;
+    						height: 30px;
+                            position: relative;
+
+
+    }
+    a.carousel-item.active{
+                        height:200px;
+                        width:400px;
+                        position:relative;
+                    }
+                    div.modal-dialog{
+
+
+                                    height:500px;
+                                    width:800px;
+                                    position:relative;
+                                            bottom:30px;
+
+                    }
+                   #myModal{
+                   				top:30px;
+                                width: 1000px;
+                                height: 500px;
+                              
+                                background-color: #ffffff ;
+
+                   }
+
+                   /*Change T-Colour*/
+
+
+
+
+#redT  {
+
+  background-color: #ee0100;
+ 
+
+
+
+}
+
+.blueT  {
+
+  background-color: #66b3ff;
+ border:0px;
+
+
+}
+
+.greenT  {
+
+  background-color: #33cc33;
+ border:0px;
+
+
+}
+.orangeT  {
+
+  background-color: #ff6600;
+ border:0px;
+
+
+}
+
+.pinkT  {
+
+  background-color: #ff6699;
+ border:0px;
+
+
+}
+
+.blackT  {
+
+  background-color: #000000;
+ border:0px;
+
+
+}
+
+.yellowT  {
+
+  background-color: #ffff00;
+ border:0px;
+
+
+}
+
+.whiteT  {
+
+  background-color: #ffffff;
+ border:0px;
+
+
+}
+
+.purpleT  {
+
+  background-color: #b366ff;
+ border:0px;
+
+
+}
+#headColour{
+         color:#00cc99;
+         font-size: 60px;
+        
+        font-family: appleberry;
+}
+
+#floatbtn {
+
+        
+        width:70px;
+        height:70px;
+        right:10px;
+        margin-left: 4px;
+        margin-right: 18px;
+
+
+}
+
+
+
+
+/*Side Menu*/
+
+
+ul.nav-pills {
+      top: 20px;
+      position: fixed;
+  }
+  div.col-sm-9 div {
+      height: 150px;
+      font-size: 18px;
+  }
+  #section1 {color: #fff; background-color: #00cc66;}
+  #section2 {color: #fff; background-color: #673ab7;}
+  #section3 {color: #fff; background-color: #ff9800;}
+  #section41 {color: #fff; background-color: #00bcd4;}
+  #section42 {color: #fff; background-color: #009688;}
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3, #section41, #section42  {
+        margin-left: 25px;
+    }
+  }
+    
+
+@font-face { 
+  font-family: newWaltDisneyUI ;
+  src: url(font/newWaltDisneyUI.ttf);
+
+}
+#tooltip
+{
+  position: absolute;
+
+  
+  
+  left:300px;
+}
+#left-arrow {
+  display: inline-block;
+  position: absolute;
+  background-image: url('content/ClipArt/back1.jpg');
+  padding: 0px;
+  left:100px;
+  height: 300px;
+  width:450px;
+  border-radius: 10px;
+box-shadow: #249e87;
+
+
+}
+#tooltip:after {
+  content: '';
+  display: block;  
+  position: absolute;
+  right: 100%;
+  top: 100px;
+  left: 80px;
+  margin-top: -10px;
+  width: 0;
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-right: 20px solid #1c7766;
+  border-bottom: 20px solid transparent;
+  z-index:999;
+
+}
+
+#scrollside::-webkit-scrollbar {
+    width: 10px;
+    height:0px;
+}
+ 
+#scrollside::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   background: white;
+   border-left: 3px solid #249e87;/*change bgcolour change this track also*/ 
+    border-right: 3px solid #249e87;/*change bgcolour change this track also*/ 
+    border-radius: 5px;
+}
+
+
+#scrollside::-webkit-scrollbar-thumb {
+
+     background: orange;
+    border-left: 5px ;
+    border-radius: 5px;
+}
+
+#scrollside::-webkit-scrollbar-corner       { 
+display: none;
+ }
+#container{
+      position: fixed;
+        left:0px;
+        top: 0px;
+}
+
+#container::-webkit-scrollbar {
+    width: 10px;
+    height:10px;
+}
+ 
+/* Track */
+#container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+
+}
+ 
+/* Handle */
+#container::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: lightblue; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    height: 5px;
+    -webkit-height:5px;
+
+}
+
+
+#container::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,0,0,0.4); 
+}
+
+#containerClipArt{
+        position: fixed;
+        left:0px;
+        top: 0px;
+}
+
+#containerClipArt::-webkit-scrollbar {
+    width: 10px;
+    height:10px;
+}
+ 
+/* Track */
+#containerClipArt::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+
+}
+ 
+/* Handle */
+#containerClipArt::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: lightblue; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    height: 5px;
+    -webkit-height:5px;
+
+}
+
+
+#containerClipArt::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,0,0,0.4); 
+}
+
+
+
+
+/*Image Upload Pannel*/
+#UploadPannel{
+      position: fixed;
+        left:0px;
+        top: 0px;
+}
+
+/* Track */
+#UploadPannel::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+
+}
+ 
+/* Handle */
+#UploadPannel::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: lightblue; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    height: 5px;
+    -webkit-height:5px;
+
+}
+
+
+#UploadPannel::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,0,0,0.4); 
+}
+
+
+
+ 
+
+
+#boy:hover {
+        background: lightgreen;
+    }
+    #tIcon:hover {
+        background: lightgreen;
+    }
+ #upload:hover {
+        background: lightgreen;
+    }
+
+
+    #sidebar{
+
+        position: fixed;
+        
+        top: 2px;
+        background: #ccff33;
+        height:600px;
+        left:10px;
+
+    }
+#ClipSide{
+
+  position: fixed;
+  left:20px;
+  top:20px;
+}
+
+
+
+
+     #home:hover{
+
+       background: lightgreen;
+
+    }
+     #download:hover{
+
+       background: lightgreen;
+
+    }
+
+
+    /*Font*/
+
+/*    @font-face { 
+   font-family:painting;
+   src: url(painting.ttf);
+}
+
+*/

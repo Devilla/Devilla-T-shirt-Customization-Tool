@@ -1,0 +1,13 @@
+#saveImagePanel {
+    border: 0px;
+    padding: 0px;
+    display: none;
+    margin: 0px;
+}
+
+#saveImagePanel img {
+    height: 400px;
+    margin-bottom: 5px;
+    width: 400px;
+}
+

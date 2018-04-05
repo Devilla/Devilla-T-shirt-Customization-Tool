@@ -1,0 +1,26 @@
+ 
+<script >
+$("iframe").load(function(){
+    // ok , now you know that the file is uploaded , you can do what you want , for example tell the user that the file is uploaded 
+    alert("The file is uploaded");
+
+    // or you can has your own technique to display the uploaded file name + id ? 
+    $.post('http://example.com/file-upload-service?do=getLastFile',null,function(attachment){
+
+       // add the last uploaded file , so the user can see the uploaded files
+       $("#ajaxResultTest").append("<h4>" + attachment.name + ":" + attachment.id "</h4>");
+
+    },'json');
+});</script>
+ <!-- Attach a file -->
+
+    <iframe id="uploadTrg" name="uploadTrg" height="0" width="0" frameborder="0" scrolling="yes"></iframe>
+
+    <form id="myForm" action="http://example.com/file-upload-service" method="post" enctype="multipart/form-data"  target="uploadTrg">
+
+        File: <input type="file" name="file">
+        <input type="submit" value="Submit" id="submitBtn"/>
+
+    </form>
+
+    <div id="ajaxResultTest"></div>

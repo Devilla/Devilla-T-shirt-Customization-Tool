@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+<title>PHP - Image Uploading with Form JS Example</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+<script src="http://malsup.github.com/jquery.form.js"></script> 
+<script> 
+        $(document).ready(function() { 
+            $("#btnSubmit").click(function(){
+              $("#frmImageUpload").ajaxForm({target: '#preview'}).submit();
+            });
+        }); 
+</script>
+</head>
+<body>
+  
+
+  <form action="imageuploadpro.php" enctype="multipart/form-data" id="frmImageUpload" method="post">
+    <div id="preview"></div>
+    
+          <input id="fooupload" type="file" title=""   style="display:none"  name="image" type="button"/>
+
+          <label for="fooupload"><img src="content/Icons/add.png" id="addimg"></label>
+    
+    <input  type="button" title="" style="display:none;" id="btnSubmit">
+    <label for="btnSubmit"><img src="content/Icons/check.png"  width="20px" id="checkimg" height="20px"></label>
+    
+  </form>
+  
+</body>
+</html>
